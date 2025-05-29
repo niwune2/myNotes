@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash/　← bashのあとにスラッシュいらねぇ
 
 i=$1
 
