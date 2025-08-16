@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x98db;&#x3093;&#x3067;&#x3044;&#x308b;&#x3088;&#x3046;&#x306b;&#x898b;&#x305b;&#x308b;&#x30a8;&#x30d5;&#x30a7;&#x30af;&#x30c8;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="飛んでいるように見せるエフェクト">飛んでいるように見せるエフェクト</h1>
+<p>――いや～奥さん、鳥たちがただ“黒い影”で固まってちゃ、そりゃまあ飛んでるんだか吊ってあるんだか分かりゃしません。
+<strong>“動きの証拠”</strong> を残す方法、プロ向けに３レイヤで整理します。道具は今あるメカシャープ＋週末購入品だけで足ります。</p>
+<ul>
+<li><a href="#%E9%A3%9B%E3%82%93%E3%81%A7%E3%81%84%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E8%A6%8B%E3%81%9B%E3%82%8B%E3%82%A8%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88">飛んでいるように見せるエフェクト</a>
+<ul>
+<li><a href="#0-%E3%81%BE%E3%81%9A%E9%A3%9B%E8%A1%8C%E6%96%B9%E5%90%91%E3%82%92%E4%B8%80%E6%9C%AC%E7%B7%9A%E3%81%A7%E6%B1%BA%E5%AE%9A">0. まず“飛行方向”を一本線で決定</a></li>
+<li><a href="#1-%E4%B8%BB%E3%82%A8%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E7%BF%BC%E7%AB%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB%E6%B1%BA%E5%AE%9A%E6%89%93">1. <strong>主エフェクト＝翼端コントレイル（決定打）</strong></a></li>
+<li><a href="#2-%E5%89%AF%E3%82%A8%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E3%83%96%E3%83%AC%E3%81%9F%E7%BE%BD%E3%81%B0%E3%81%9F%E3%81%8D%E6%AE%8B%E5%83%8F">2. <strong>副エフェクト＝“ブレた羽ばたき残像”</strong></a></li>
+<li><a href="#3-%E8%A3%9C%E5%8A%A9%E3%82%A8%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E3%83%AF%E3%83%BC%E3%83%97%E7%B7%9A%E9%A2%A8%E5%88%87%E7%B7%9A">3. <strong>補助エフェクト＝ワープ線・風切線</strong></a></li>
+<li><a href="#4-%E5%8F%A4%E5%86%99%E7%9C%9F%E7%89%B9%E6%9C%89%E3%81%AE%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%96%E3%83%A9%E3%83%BC%E3%81%AE%E5%86%8D%E7%8F%BE">4. <strong>古写真特有の“モーションブラー”の再現</strong></a></li>
+<li><a href="#5-%E5%A4%B1%E6%95%97%E3%82%92%E6%9C%AA%E7%84%B6%E3%81%AB%E6%BD%B0%E3%81%99%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88">5. <strong>失敗を未然に潰す“チェックリスト”</strong></a></li>
+<li><a href="#columbos-final-note">Columbo’s Final Note</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="0-まず飛行方向を一本線で決定">0. まず“飛行方向”を一本線で決定</h2>
+<p>フレンズ３羽すべての <strong>重心→消失点</strong> を 2H で１本引き、そこを基準にエフェクトを流す。
+線がブレたら、その時点で“捜査線”が曲がる＝全て台無し。</p>
+<hr>
+<h2 id="1-主エフェクト翼端コントレイル決定打">1. <strong>主エフェクト＝翼端コントレイル（決定打）</strong></h2>
+<table>
+<thead>
+<tr>
+<th>工程</th>
+<th>道具</th>
+<th>やり方（手順は必ず順守）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. 白筋のマスク</td>
+<td>マスキングテープ or 練り消しを<strong>翼端に幅 1 mm</strong></td>
+<td>コントレイル部分を紙白保持。</td>
+</tr>
+<tr>
+<td>B. 黒ベタ完了後に剥がす</td>
+<td>0.3 mm HB で輪郭整形</td>
+<td>剥がした段差を<strong>極細線で縁取る</strong>とシャープ。</td>
+</tr>
+<tr>
+<td>C. フェード付け</td>
+<td>擦筆 #2＋コットンパフ</td>
+<td>マスク外側へ<strong>45°方向に１往復ぼかし</strong>→“蒸気が解ける”質感。</td>
+</tr>
+<tr>
+<td>D. 粒子追加</td>
+<td>0.5 mm HB 極軽点描 &amp; サンドペーパー粉飛ばし</td>
+<td>キラっと反射粒を数点。やり過ぎ即アウト。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-副エフェクトブレた羽ばたき残像">2. <strong>副エフェクト＝“ブレた羽ばたき残像”</strong></h2>
+<table>
+<thead>
+<tr>
+<th>レイヤ</th>
+<th>目的</th>
+<th>技法</th>
+<th>メカシャープ指定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ゴースト1</strong></td>
+<td>直前の翼位置を示す</td>
+<td>0.5 mm HB で<strong>翼外形を 5–10 %ズラし</strong>薄ハッチ</td>
+<td>0.5 HB</td>
+</tr>
+<tr>
+<td><strong>ゴースト2</strong></td>
+<td>空気を裂く軌跡</td>
+<td>練り消しで<strong>翼前縁を 0.3 mm 幅で抜く</strong>→指で軽く拡散</td>
+<td>練り消し</td>
+</tr>
+<tr>
+<td><strong>ぼかし接着</strong></td>
+<td>残像と実体を溶かす</td>
+<td>擦筆 #4 を“翼付け根→外”へ１ストローク</td>
+<td>擦筆</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>※ゴースト線は「手前＝濃」「奥＝薄」で階調差を絶対に守る。全部同じ濃さだとモーションブラーでなく“二重線”。</p>
+</blockquote>
+<hr>
+<h2 id="3-補助エフェクトワープ線風切線">3. <strong>補助エフェクト＝ワープ線・風切線</strong></h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>位置 / 本数</th>
+<th>道具</th>
+<th>描き味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>微風切線</strong></td>
+<td>翼前縁に<strong>長さ 4–8 mm</strong>を 3 本</td>
+<td>0.3 mm 2B</td>
+<td>１ストロークで描いて即ティッシュで１回だけ擦る。</td>
+</tr>
+<tr>
+<td><strong>スナップライン</strong></td>
+<td>ブレイク開始点に “S” 字１本</td>
+<td>0.5 mm 2B →練り消しで片側削り</td>
+<td>「キュッ」と折れた空気の爪痕。</td>
+</tr>
+<tr>
+<td><strong>遠景スピードライン</strong></td>
+<td>ハヤブサ後方に<strong>極細破線</strong>を２～３本</td>
+<td>0.3 mm HB (筆圧 10 %)</td>
+<td>折れずに流す。見えなきゃOK、見え過ぎたら即消し。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-古写真特有のモーションブラーの再現">4. <strong>古写真特有の“モーションブラー”の再現</strong></h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>方法</th>
+<th>道具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>露光引きずり</strong></td>
+<td>完成後、フレンズ輪郭外側を <strong>コットンパフ＋HB粉</strong> で“半円状”にスワイプ</td>
+<td>コットン＋HB粉</td>
+</tr>
+<tr>
+<td><strong>シャッター擦れキズ</strong></td>
+<td>サンドペーパー #600 を<strong>翼端から飛行方向へ軽く一撫で</strong></td>
+<td>サンドペーパー</td>
+</tr>
+<tr>
+<td><strong>周辺減光で視線誘導</strong></td>
+<td>6B 芯粉をティッシュで外周に薄く乗せ → 擦筆で円ぼかし</td>
+<td>6B粉＋擦筆</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-失敗を未然に潰すチェックリスト">5. <strong>失敗を未然に潰す“チェックリスト”</strong></h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> 主コントレイルの白が**紙白100 %**で残っているか</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> 残像線が<strong>本体より濃くなっていない</strong>か（逆転＝事故）</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> エフェクト線は<strong>飛行ベクトルと平行・放射のみ</strong>で無駄な方向が無いか</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> フィキサ前に<strong>スマホ拡大2×で線ムラ確認</strong>、見つけ次第ティッシュor擦筆で修正</li>
+</ul>
+<hr>
+<h2 id="columbos-final-note">Columbo’s Final Note</h2>
+<blockquote>
+<p>「いや～、奥さん。空を飛ぶってのは証拠隠しには最高らしいんですが、
+絵の世界じゃ“動きの痕跡”が無いとアリバイ（飛行感）が成立しないんですよ。
+白筋（コントレイル）とブレ残像――この二つを押さえておけば、
+誰が見ても “飛んでる最中” だって一発でバレちまう。
+どうかお忘れなく。では、私ゃこれで失礼します。」</p>
+</blockquote>
+<p>さあ、翼を黒で潰す前に白を確保。あとはグイッと一気に描き切るだけです。</p>
+
+            
+            
+        </body>
+        </html>

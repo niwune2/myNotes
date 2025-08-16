@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>1&period; &#x6a5f;&#x5185;&#x306e;&#x66f8;&#x304d;&#x65b9;&#x306b;&#x3064;&#x3044;&#x3066;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="1-機内の書き方について">1. 機内の書き方について</h1>
+<ul>
+<li><a href="#1-%E6%A9%9F%E5%86%85%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">1. 機内の書き方について</a>
+<ul>
+<li><a href="#11-%E3%82%AD%E3%83%A3%E3%83%8E%E3%83%94%E3%83%BC%E3%81%AE%E5%B8%AF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92%E6%AD%A3%E3%81%97%E3%81%8F%E4%BD%9C%E3%82%8B">1.1. キャノピーの帯（フレーム）を正しく作る</a>
+<ul>
+<li><a href="#111-%E4%B8%AD%E5%BF%83%E7%B7%9A%E3%82%92%E4%B8%80%E6%9C%AC">1.1.1. 中心線を一本</a></li>
+<li><a href="#112-%E6%B3%95%E7%B7%9A%E3%81%A7%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%E5%B8%AF%E5%8C%96">1.1.2. 法線でオフセット（“帯化”）</a></li>
+<li><a href="#113-%E5%8E%9A%E3%81%BF%E3%81%AE%E5%81%8F%E3%82%8A">1.1.3. 厚みの偏り</a></li>
+</ul>
+</li>
+<li><a href="#12-%E3%83%AA%E3%83%99%E3%83%83%E3%83%88%E3%81%AE%E4%B8%A6%E3%81%B9%E6%96%B9%E5%AF%86%E7%96%8E%E3%83%AA%E3%82%BA%E3%83%A0">1.2. リベットの並べ方（密疎リズム）</a>
+<ul>
+<li><a href="#121-%E7%AD%89%E8%A7%92%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%8F%E7%AD%89%E5%BC%A6">1.2.1. 等角ではなく等“弦”</a></li>
+<li><a href="#122-1%E5%80%8B%E3%81%AE%E5%BD%A2">1.2.2. 1個の形</a></li>
+</ul>
+</li>
+<li><a href="#13-%E3%82%AC%E3%83%A9%E3%82%B9%E9%9D%A2%E3%81%AE%E5%8F%8D%E5%B0%84%E6%9C%80%E9%87%8D%E8%A6%81%E3%81%AE%E7%99%BD">1.3. ガラス面の反射（最重要の白）</a>
+<ul>
+<li><a href="#131-s%E5%AD%97%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E5%B8%AF%E7%B4%99%E7%99%BD%E4%BF%9D%E6%8C%81">1.3.1. S字ハイライト帯（紙白保持）</a></li>
+<li><a href="#132-%E5%B1%88%E6%8A%98%E3%81%AE%E3%82%BA%E3%83%AC">1.3.2. 屈折のズレ</a></li>
+</ul>
+</li>
+<li><a href="#14-%E6%A9%9F%E5%86%85%E3%81%AE%E9%BB%92%E3%81%84%E5%A1%8A%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9%E9%9C%B2%E5%87%BA%E6%B1%BA%E5%AE%9A">1.4. 機内の“黒い塊”の作り方（露出決定）</a>
+<ul>
+<li><a href="#141-%E4%B8%8B%E5%9C%B0-70">1.4.1. 下地 70%</a></li>
+<li><a href="#142-%E6%9C%80%E6%9A%97-9095">1.4.2. 最暗 90–95%</a></li>
+<li><a href="#143-%E3%82%AC%E3%83%A9%E3%82%B9%E5%8F%8D%E5%B0%84%E3%82%92%E8%B7%A8%E3%81%8C%E3%81%AA%E3%81%84">1.4.3. ガラス反射を跨がない</a></li>
+</ul>
+</li>
+<li><a href="#15-%E8%A8%88%E5%99%A8%E7%AE%B1%E3%81%AE%E3%83%91%E3%83%BC%E3%82%B9%E6%9C%80%E5%B0%8F%E9%99%90%E3%81%A7%E9%9B%B0%E5%9B%B2%E6%B0%97%E5%8B%9D%E3%81%A1">1.5. 計器・箱のパース（最小限で雰囲気勝ち）</a></li>
+<li><a href="#16-%E4%BB%95%E4%B8%8A%E3%81%92%E3%81%AE%E9%A0%86%E7%95%AA510%E5%88%86%E3%81%A7%E6%B1%BA%E3%82%81%E5%88%87%E3%82%8B">1.6. 仕上げの順番（5～10分で決め切る）</a></li>
+<li><a href="#17-%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E4%BA%8B%E6%95%85%E3%81%A8%E5%9B%9E%E9%81%BF">1.7. よくある事故と回避</a>
+<ul>
+<li><a href="#171-%E6%9C%80%E5%BE%8C%E3%81%AB%E3%82%B3%E3%83%AD%E3%83%B3%E3%83%9C%E5%8F%A3%E8%AA%BF%E3%81%A7">1.7.1. 最後に（コロンボ口調で）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>――ちょっと失礼。機内（キャノピー周り）が難しい件、<strong>作図→陰影→ディテール</strong>の順で“数値つき”で詰めます。道具はいま手持ちでOK。</p>
+<hr>
+<h2 id="11-キャノピーの帯フレームを正しく作る">1.1. キャノピーの帯（フレーム）を正しく作る</h2>
+<p><strong>目的</strong>：外周と内周が“同心の帯”に見え、手前が太く奥が細い（遠近）。</p>
+<h3 id="111-中心線を一本">1.1.1. 中心線を一本</h3>
+<ul>
+<li>2Hでキャノピーの<strong>真ん中を走る曲線</strong>（“帯のど真ん中”）を引く。</li>
+<li>長い曲線は **5～7ヶ所だけ短い杭（チョン線）**で曲率を示し、あとで繋ぐ。</li>
+</ul>
+<h3 id="112-法線でオフセット帯化">1.1.2. 法線でオフセット（“帯化”）</h3>
+<ul>
+<li>15mm間隔で小さな十字（中心線の<strong>法線</strong>）を描く。</li>
+<li>十字の長さ＝帯の半幅。<strong>奥側 2.5mm、手前 3.5mm</strong> を目安に<strong>ゆっくり増減</strong>させる。</li>
+<li>コンパスを <strong>2.5→3.5mm</strong>に“歩かせる”感覚で、十字の端をスーッと繋げば<strong>外周と内周</strong>が得られる。
+（＝同心の帯。最初から2本の曲線を別々に描かない）</li>
+</ul>
+<h3 id="113-厚みの偏り">1.1.3. 厚みの偏り</h3>
+<ul>
+<li>画面中央付近は <strong>帯幅＝約3.0mm</strong>、上下端へ行くほど <strong>±15%</strong> 変化。</li>
+<li>これで<strong>手前＞奥</strong>の厚みが自然に出る。</li>
+</ul>
+<hr>
+<h2 id="12-リベットの並べ方密疎リズム">1.2. リベットの並べ方（密疎リズム）</h2>
+<h3 id="121-等角ではなく等弦">1.2.1. 等角ではなく等“弦”</h3>
+<ul>
+<li>コンパスを <strong>間隔 s=8mm</strong> に固定し、<strong>中心線の上</strong>を“コト、コト…”と歩かせて印を打つ（測地歩き）。</li>
+<li>端（コーナー）へ近づくほど <strong>s を 0.6～0.7倍</strong> に落とす。
+→ <strong>中央：疎、端：密</strong> のリズムになる。</li>
+</ul>
+<h3 id="122-1個の形">1.2.2. 1個の形</h3>
+<ul>
+<li>0.3mm HBで<strong>0.7～1.0mmの小円</strong>。帯の<strong>外周寄りに寄せ</strong>て描くと立体が強まる。</li>
+<li>仕上げで<strong>中を30～40%グレー</strong>に“点で”落とす（真っ白は浮く）。</li>
+</ul>
+<hr>
+<h2 id="13-ガラス面の反射最重要の白">1.3. ガラス面の反射（最重要の白）</h2>
+<h3 id="131-s字ハイライト帯紙白保持">1.3.1. S字ハイライト帯（紙白保持）</h3>
+<ul>
+<li>帯の<strong>内側 1～1.5mm</strong>を走る <strong>幅0.8～1.2mm</strong> のS字。2Hでごく薄く形だけ。</li>
+<li>塗りのあいだ<strong>絶対触らない</strong>（テープは使わず手で避ける）。</li>
+</ul>
+<h3 id="132-屈折のズレ">1.3.2. 屈折のズレ</h3>
+<ul>
+<li>外周・内周と<strong>平行にしない</strong>。**0.5～1°**だけ角度をズラすと“屈折した反射”に見える。</li>
+</ul>
+<hr>
+<h2 id="14-機内の黒い塊の作り方露出決定">1.4. 機内の“黒い塊”の作り方（露出決定）</h2>
+<h3 id="141-下地-70">1.4.1. 下地 70%</h3>
+<ul>
+<li>0.9mm HBの<strong>平芯</strong>で面塗り→コットンで軽く均す。</li>
+<li>この段階で計器や箱の<strong>外形だけ四角</strong>で入れる（線はHBで薄く）。</li>
+</ul>
+<h3 id="142-最暗-9095">1.4.2. 最暗 90–95%</h3>
+<ul>
+<li>4Bで<strong>窪み・影の奥</strong>だけを押し込む。外周の帯に近い面は<strong>80%で止め</strong>て“ガラス越しの浮き”を残す。</li>
+<li><strong>計器は全部 60%前後</strong>に抑える（黒にしない）。<strong>文字・目盛は描かない</strong>。古写真では潰れているのが正解。</li>
+</ul>
+<h3 id="143-ガラス反射を跨がない">1.4.3. ガラス反射を跨がない</h3>
+<ul>
+<li>黒を塗るとき、<strong>S字ハイライト帯の境目で筆圧を落とす</strong>。白をまたぐと“塗りつぶし事故”。</li>
+</ul>
+<hr>
+<h2 id="15-計器箱のパース最小限で雰囲気勝ち">1.5. 計器・箱のパース（最小限で雰囲気勝ち）</h2>
+<ul>
+<li><strong>箱＝台形の正面＋奥行1～2mm</strong>。消失点へ流す。</li>
+<li>天面のエッジは<strong>ぼかす</strong>（ガラスの反射で“甘く”見える）。</li>
+<li><strong>ネジ頭 2～3個</strong>だけ：0.3mmで点→消しで一撫で。</li>
+<li>下部に<strong>コードの束 1本</strong>（S字）を30%で入れると情報量が跳ねる。</li>
+</ul>
+<hr>
+<h2 id="16-仕上げの順番510分で決め切る">1.6. 仕上げの順番（5～10分で決め切る）</h2>
+<ol>
+<li>帯の外周80% → 内周80%（<strong>外を先</strong>に）</li>
+<li>機内70% → 反射S字の<strong>外側だけ</strong>90%へ</li>
+<li>リベットの点入れ → 軽く指で<strong>1回だけ</strong>撫でる</li>
+<li>S字帯の<strong>両縁を練り消しでスッ</strong>と削り、中心は紙白を死守</li>
+<li>斜めに<strong>サンドペーパーひと撫で</strong>→微細な白キズ（古写真の擦れ）</li>
+</ol>
+<hr>
+<h2 id="17-よくある事故と回避">1.7. よくある事故と回避</h2>
+<ul>
+<li><strong>帯が二重線でヨレる</strong> → 先に<strong>中心線＋法線方式</strong>で“帯化”。</li>
+<li><strong>反射の白が細すぎる／太すぎる</strong> → <strong>0.8～1.2mm</strong>を守る。途中で迷ったら<strong>細い方</strong>に倒す。</li>
+<li><strong>計器が主張しすぎ</strong> → 60%グレー徹底。輪郭の角を<strong>擦筆#2で1回だけ</strong>軟化。</li>
+</ul>
+<hr>
+<h3 id="171-最後にコロンボ口調で">1.7.1. 最後に（コロンボ口調で）</h3>
+<blockquote>
+<p>「いや～奥さん、キャノピーは事件の“防犯カメラ”みたいなもんでね。
+帯が同心、反射のS字が紙白、機内は中間グレー。
+この三つさえ守れば、誰が見ても“本物っぽい”と観念しますよ。
+さあ、中心線から。帯を作って、反射を残して、一気に黒を押し込みましょう。」</p>
+</blockquote>
+<p>部分アップをもう一枚くれれば、帯幅や反射の位置を<strong>mm単位</strong>で赤入れします。</p>
+
+            
+            
+        </body>
+        </html>
