@@ -7,6 +7,8 @@
   - [2. Gitの基本設定（最初に一度だけ）](#2-gitの基本設定最初に一度だけ)
   - [3. 認証方式の選択（実用順）](#3-認証方式の選択実用順)
   - [4-A. 「HTTPS＋PAT」手順（基本ルート）](#4-a-httpspat手順基本ルート)
+    - [1. 既存リポジトリならリモートURLをHTTPSで統一](#1-既存リポジトリならリモートurlをhttpsで統一)
+    - [2. push（初回のみ「Username / Password」入力が出る）](#2-push初回のみusername--password入力が出る)
   - [4-B. 「SSH鍵」手順（入力ゼロ運用）](#4-b-ssh鍵手順入力ゼロ運用)
   - [5. リポジトリ操作の基本フロー](#5-リポジトリ操作の基本フロー)
   - [6. つまずき対処（原因→対策が直結する一覧）](#6-つまずき対処原因対策が直結する一覧)
@@ -21,7 +23,7 @@
     - [３）GitHubから取り直したい場合（clone）](#３githubから取り直したい場合clone)
   - [ありがちなハマり所チェック](#ありがちなハマり所チェック)
   - [ここまでの最短復旧コマンド（多くのケースで有効）](#ここまでの最短復旧コマンド多くのケースで有効)
-  - [結論](#結論-1)
+  - [結論2](#結論2)
   - [１．今いる場所とブランチ](#１今いる場所とブランチ)
   - [２．最新状態かどうか（メッセージで判定）](#２最新状態かどうかメッセージで判定)
   - [３．直近の取得履歴を可視化](#３直近の取得履歴を可視化)
@@ -116,14 +118,14 @@ git config -l
 
 手順B：iSHでpush（初回だけPAT入力）
 
-1. 既存リポジトリならリモートURLをHTTPSで統一
+### 1. 既存リポジトリならリモートURLをHTTPSで統一
 
 ```sh
 git remote set-url origin https://github.com/<ユーザー名>/<リポジトリ>.git
 git remote -v
 ```
 
-2. push（初回のみ「Username / Password」入力が出る）
+### 2. push（初回のみ「Username / Password」入力が出る）
 
 ```sh
 git push origin main
@@ -323,12 +325,13 @@ cd ~/myNotes                # 見つかった場所へ移動
 git remote -v               # origin があるか確認
 ```
 
-* `origin` がある → URLだけ直したい
+- `origin` がある → URLだけ直したい
 
   ```sh
   git remote set-url origin https://github.com/niwune2/myNotes.git
   ```
-* `origin` が無い → 新規に追加
+
+- `origin` が無い → 新規に追加
 
   ```sh
   git remote add origin https://github.com/niwune2/myNotes.git
@@ -365,17 +368,17 @@ git status
 
 ## ありがちなハマり所チェック
 
-* URLの改行・スペース混入
+- URLの改行・スペース混入
   あなたのコマンドは途中で改行されています。URLは **1行で** 入れてください。
   例：`https://github.com/niwune2/myNotes.git`
-* ブランチ名の食い違い
+- ブランチ名の食い違い
 
   ```sh
   git branch --show-current
   ```
 
   で `main` か `master` か確認して、push先を合わせる。
-* 資格情報の取り違い
+- 資格情報の取り違い
   403や401が続く場合はキャッシュを一度クリア。
 
   ```sh
@@ -398,7 +401,7 @@ git push origin main
 この順で「場所を正す → originを整える → push」の三段で直ります。
 道に迷ったら `pwd` と `ls -a`、Gitで迷ったら `git status`。これで迷子の9割は帰宅できます。
 
-## 結論
+## 結論2
 
 `git pull origin main` が通ったなら、ほぼ成功です。あとは「本当に最新を取れているか」を確認しましょう。下のチェックを上から順に実行すれば判定できます。
 
@@ -412,9 +415,9 @@ git branch --show-current
 git remote -v
 ```
 
-* `pwd` が `~/myNotes`
-* ブランチが `main`
-* `origin` のURLが `https://github.com/niwune2/myNotes.git`（またはSSH）
+- `pwd` が `~/myNotes`
+- ブランチが `main`
+- `origin` のURLが `https://github.com/niwune2/myNotes.git`（またはSSH）
   ならOK。
 
 ---
@@ -425,8 +428,8 @@ git remote -v
 git status
 ```
 
-* `Your branch is up to date with 'origin/main'.` と出れば最新。
-* それ以外でも赤字なしでクリーンなら、とりあえず整っています。
+- `Your branch is up to date with 'origin/main'.` と出れば最新。
+- それ以外でも赤字なしでクリーンなら、とりあえず整っています。
 
 ---
 
@@ -436,8 +439,8 @@ git status
 git log --oneline --graph --decorate -n 10
 ```
 
-* 左の枝線（graph）とコミットIDが見えます。
-* 先頭に `(HEAD -> main, origin/main)` のように **HEAD と origin/main が同じ**なら同期済み。
+- 左の枝線（graph）とコミットIDが見えます。
+- 先頭に `(HEAD -> main, origin/main)` のように **HEAD と origin/main が同じ**なら同期済み。
 
 ---
 
@@ -447,7 +450,7 @@ git log --oneline --graph --decorate -n 10
 git reflog -n 5
 ```
 
-* 直近操作の履歴が出ます。`pull: Fast-forward` 等があれば、取得で先へ進んだことが確認できます。
+- 直近操作の履歴が出ます。`pull: Fast-forward` 等があれば、取得で先へ進んだことが確認できます。
 
 ---
 
@@ -457,8 +460,8 @@ git reflog -n 5
 git diff --name-only --diff-filter=U
 ```
 
-* 何も出なければコンフリクトなし。
-* 出たらそのファイルで衝突中です（今回は出ない想定）。
+- 何も出なければコンフリクトなし。
+- 出たらそのファイルで衝突中です（今回は出ない想定）。
 
 ---
 
@@ -471,7 +474,7 @@ git branch -u origin/main
 git branch -vv
 ```
 
-* `main 1234abc [origin/main]` のように見えれば設定完了。
+- `main 1234abc [origin/main]` のように見えれば設定完了。
 
 ---
 
@@ -486,8 +489,8 @@ git commit -m "iSH check: add marker"
 git push origin main
 ```
 
-* これでGitHub上の `myNotes` に `ish_check.txt` が増えれば、往復できています。
-* いらなければ後で削除コミットすればOK。
+- これでGitHub上の `myNotes` に `ish_check.txt` が増えれば、往復できています。
+- いらなければ後で削除コミットすればOK。
 
 ---
 
