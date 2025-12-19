@@ -1,0 +1,108 @@
+🔶 問題1
+
+変数 x が 0 未満なら「NEGATIVE」、0 なら「ZERO」、1 以上なら「POSITIVE」と表示せよ。
+
+🔶 問題2
+
+変数 num が 3 の倍数なら「Fizz」、5 の倍数なら「Buzz」、15 の倍数なら「FizzBuzz」、それ以外は数値をそのまま表示せよ。
+
+🔶 問題3
+
+入力された文字が
+
+a
+
+b
+
+c
+のいずれかなら「OK」、
+それ以外は「NG」と表示せよ。
+
+🔶 問題4
+
+RANDOM % 4 の結果で
+0 → “NORTH”
+1 → “SOUTH”
+2 → “EAST”
+3 → “WEST”
+を表示せよ。
+
+🔶 問題5
+
+fileA.txt, fileB.txt, fileC.txt のどれかを選ぶメニューを作り、
+1 → A
+2 → B
+3 → C
+それ以外 → ERROR
+と表示するスクリプトを書け。
+
+1️⃣ if の復習（要点だけ）
+■ if の基本形
+if 条件; then
+   処理
+elif 別条件; then
+   別処理
+else
+   その他処理
+fi
+
+■ 数値比較は (( ))
+if (( num > 10 )); then
+
+■ 文字列比較は [ ]
+if [ "$name" = "ay" ]; then
+
+2️⃣ case（条件分岐のもう一つの方法）
+
+if が「数式・条件向き」だとすれば、
+case は 「パターンマッチ（文字列分類）」に最適 です。
+
+◎ case の基本形
+case 変数 in
+  パターン1)
+      処理
+      ;;
+  パターン2)
+      処理
+      ;;
+  *)
+      デフォルト
+      ;;
+esac
+
+◎ 実例：yes/no 判定
+read answer
+
+case "$answer" in
+  yes|y)
+      echo "OK"
+      ;;
+  no|n)
+      echo "NG"
+      ;;
+  *)
+      echo "不明です"
+      ;;
+esac
+
+
+| で OR 条件
+
+正規表現に似ているが Bash 独自のパターン
+
+* はどれにも該当しなかったとき
+
+◎ 数値も case で分類できる
+read num
+
+case $num in
+  1|2|3)
+      echo "小さい"
+      ;;
+  4|5|6)
+      echo "中くらい"
+      ;;
+  *)
+      echo "大きい"
+      ;;
+esac
