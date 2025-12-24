@@ -1,0 +1,57 @@
+Last login: Fri Dec 19 17:13:37 on ttys000
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ls              at 17:55:32
+file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh 
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ chmod 755 file.menu.sh 
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh      
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+UNKNOWN COMMAND
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+./file.menu.sh: line 10: -f: command not found
+./file.menu.sh: line 10: -d: command not found
+data.txt と backup/data_backup.txt を作成します。
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+./file.menu.sh: line 10: -f: command not found
+./file.menu.sh: line 13: -d: command not found
+ファイルは存在します
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+data.txt を作成します。
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+./file.menu.sh: line 16: syntax error near unexpected token `elif'
+./file.menu.sh: line 16: `        elif [ ! -f "data.txt" ]; then'
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+./file.menu.sh: line 16: syntax error near unexpected token `elif'
+./file.menu.sh: line 16: `        elif [ ! -f data.txt ]; then'
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+./file.menu.sh: line 11: [: missing `]'
+data.txt を作成します。
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+./file.menu.sh: line 11: [: missing `]'
+backup/ を作成します。
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ vim file.menu.sh
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+data.txt と backup/を作成します
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+data.txt を作成します。
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+backup/ を作成します。
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯ ./file.menu.sh 1
+ファイルは存在します
+~/De/myNotes/B/bashPractice25121/question3 on main !2 ?1 ❯                 at 18:35:22
