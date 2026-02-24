@@ -1,0 +1,8 @@
+INFO  Start process
+ERROR Failed to connect DB
+INFO  Retry
+ERROR Timeout
+WARNING Disk almost full
+ERROR Connection closed
+INFO  End
+
